@@ -1,5 +1,6 @@
 $(document).ready(() => {
-  //The .on() method binds(connects(I think)) the event listener(the first parameter, it's basically registering that event) and the second parameter(the call back function that's triggered when the event occurs on the html element that we're selecting/targeting).
+  //Notes: The .on() method binds(connects) the event listener(the first parameter, which basically registers that event)
+  // and the second parameter(the call back function that's triggered when the event occurs on the html element that we're selecting/targeting).
   $('.menu').on('mouseenter', () => {
     $('.nav-menu').show();
   })
@@ -14,9 +15,9 @@ $(document).ready(() => {
   })
 
   $('.postText').on('keyup', (event) => {
-    //The .focus() jQuery method tells the <text area> to expect typed text as soon as the page loads.
+    //Notes: The .focus() jQuery method tells the <text area> to expect typed text as soon as the page loads.
     $('.postText').focus();
-    //Next we set post equal to the value of string inside of the .postText element.
+    //Notes: Next we set post equal to the value of string inside of the .postText element.
     let post = $(event.currentTarget).val();
     let remaining = 140 - post.length;
     $('.characters').html(remaining);
